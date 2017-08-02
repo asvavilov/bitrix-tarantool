@@ -34,3 +34,13 @@ box.sql.execute([[create table bt1(ID INTEGER PRIMARY KEY, NAME VARCHAR(255), XM
 box.sql.execute([[insert into bt1 (ID, NAME, XML_ID) values (1, 'Test1', 'test-1')]])
 box.sql.execute([[insert into bt1 (ID, NAME, XML_ID) values (2, 'Test2', 'test-2')]])
 ```
+
+модели:
+
+model.php - тестовая модель (расширение Entity\DataManager)
+
+Прочее
+------
+
+- _db.php - консольные эксперименты
+- test.php - веб-эксперименты
