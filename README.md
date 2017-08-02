@@ -1,11 +1,21 @@
-ПО:
+Описание
+========
+
+Установка и использование
+=========================
+
+ПО
+--
 
 - Tarantool 1.8.1+ (https://tarantool.org/en/doc/1.8/tutorials/sql_tutorial.html)
 - PECL PHP driver for Tarantool (https://github.com/tarantool/tarantool-php)
 
 Файлы драйвера базы (tarantool*.php) должны быть расположены в bitrix/modules/main/lib/db.
 
-В .settings.php нужно подключение в БД:
+Подготовка/настройка
+--------------------
+
+В bitrix/.settings.php нужно подключение в БД:
 ```
 'tarantool' => array(
   'className' => '\\Bitrix\\Main\\DB\\TarantoolConnection',
@@ -15,6 +25,8 @@
   'password' => '',
 ),
 ```
+
+Тестовая модель (\My\TestTable, расширение Entity\DataManager) в model.php должна быть подключена в своем модуле или в init.php.
 
 В консоли tarantool:
 
@@ -34,10 +46,6 @@ box.sql.execute([[create table bt1(ID INTEGER PRIMARY KEY, NAME VARCHAR(255), XM
 box.sql.execute([[insert into bt1 (ID, NAME, XML_ID) values (1, 'Test1', 'test-1')]])
 box.sql.execute([[insert into bt1 (ID, NAME, XML_ID) values (2, 'Test2', 'test-2')]])
 ```
-
-модели:
-
-model.php - тестовая модель (расширение Entity\DataManager)
 
 Прочее
 ------
