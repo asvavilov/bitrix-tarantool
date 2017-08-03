@@ -26,7 +26,7 @@ class TestTable extends Main\Entity\DataManager
 				'autocomplete' => true,
 				'title' => Loc::getMessage('TEST_ENTITY_ID_FIELD'),
 			),
-			'UF_NAME' => array(
+			'NAME' => array(
 				'data_type' => 'text',
 				'title' => Loc::getMessage('TEST_ENTITY_UF_NAME_FIELD'),
 			),
